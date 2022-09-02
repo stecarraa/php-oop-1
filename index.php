@@ -1,6 +1,6 @@
 <?php 
 
-class Movie{
+class Movie {
 
     private $title;
     private $language;
@@ -14,7 +14,19 @@ class Movie{
         $this->director = $_director;
     }
 
+    
 
 }
+$movies = [];
 
-?>
+    $theLOTR = new Movie("The Lord of The Rings", "J.R.R. Tolkien", 2001);
+
+
+    $goodFellas = new Movie("Goodfellas", "Martin Scorsese", 1990);
+
+
+    $pulpFiction = new Movie("Pulp Fiction", "Quentin Tarantino", 1994);
+
+    array_push($movies,$goodFellas,$pulpFiction,$theLOTR);
+
+    var_dump($movies);
