@@ -14,6 +14,16 @@ class Movie {
         $this->director = $_director;
     }
 
+    public function getTitle() {
+        return $this->title;
+    }
+    public function getYear() {
+        return $this->year;
+    }
+    public function getDirector() {
+        return $this->director;
+    }
+
     
 
 }
@@ -30,3 +40,37 @@ $movies = [];
     array_push($movies,$goodFellas,$pulpFiction,$theLOTR);
 
     var_dump($movies);
+
+
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php-oop</title>
+</head>
+<body>
+<main class="container">
+        <div class="row">
+            <?php
+
+            foreach ($movies as $movie) {
+                echo '<div class="box">';
+                echo "<h2>" .$movie->getTitle(). "</h2>";
+                echo "<div class='text'>" . $movie->getYear() . "</div>";
+                echo "<div class='text'>" . $movie->getDirector() . "</div>";
+                echo "</div>";
+            }
+
+            ?>
+
+        </div>
+
+    </main>
+</body>
+</html>
